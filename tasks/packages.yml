@@ -5,7 +5,8 @@
        - vim
        - git
        - python3-psutil
-       - snapd
+       - fedmod
+       - flatpak-module-tools
               
 -  name: Copy wallpaper file.
    copy:
@@ -62,10 +63,8 @@
        - microsoft-edge-stable
        - code
 
-- name: Install Slack with Snap.
-  community.general.snap:
-    name: slack
-    classic: yes
-    state: present
-
+- name: Install Slack with Flatpack.
+  community.general.flatpak:
+    name:
+      - com.slack.Slack
 
