@@ -6,6 +6,7 @@
        - git
        - python3-psutil
        - snapd
+       - compat-openssl10
        
 -  name: Copy wallpaper file.
    copy:
@@ -59,7 +60,10 @@
    yum_repository:
     name: microsoft
     description: Microsoft Repository
-    baseurl: "https://packages.microsoft.com/config/rhel/7/prod.repo"
+    baseurl: https://packages.microsoft.com/config/rhel/7/prod.repo
+    state: present
+    gpgkey: https://packages.microsoft.com/keys/microsoft.asc
+    gpgcheck: yes
 
 -  name: Install Microsoft Applications.
    package:
