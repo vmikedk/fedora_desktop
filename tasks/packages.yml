@@ -5,8 +5,7 @@
        - vim
        - git
        - python3-psutil
-       - code
-
+       
 -  name: Copy wallpaper file.
    copy:
      src: files/wallpaper.jpg
@@ -50,3 +49,4 @@
      name:
        - teams
        - microsoft-edge-stable
+       - code
