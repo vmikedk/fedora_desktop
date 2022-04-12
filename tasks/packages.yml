@@ -55,22 +55,12 @@
      gpgkey: https://packages.microsoft.com/keys/microsoft.asc
      gpgcheck: yes
 
--  name: Add repository - Fedora
-   yum_repository:
-    name: microsoft
-    description: Microsoft Repository
-    baseurl: https://packages.microsoft.com/config/rhel/7/prod.repo
-    state: present
-    gpgkey: https://packages.microsoft.com/keys/microsoft.asc
-    gpgcheck: yes
-
 -  name: Install Microsoft Applications.
    package:
      name:
        - teams
        - microsoft-edge-stable
        - code
-       - powershell
 
 - name: Install Slack with Snap.
   community.general.snap:
@@ -78,11 +68,15 @@
     classic: yes
     state: present
 
--  name: Install additional Applications with Snap.
+-  name: Install Bitwarden with Snap.
    community.general.slack:
      name: bitwarden
      classic:
      state: present
 
-
+-  name: Install Powershell with Snap.
+   community.general.slack:
+     name: powershell
+     classic:
+     state: present
 
