@@ -68,12 +68,6 @@
     classic: yes
     state: present
 
--  name: Install Bitwarden with Snap.
-   community.general.slack:
-     name: bitwarden
-     classic: yes 
-     state: present
-
 -  name: Install Powershell with Snap.
    community.general.slack:
      name: powershell
