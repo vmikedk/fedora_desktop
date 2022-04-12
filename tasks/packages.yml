@@ -65,4 +65,5 @@
 - name: Install Applications with Snap.
   community.general.snap:
     name: slack
+    classic: yes
     state: present  
