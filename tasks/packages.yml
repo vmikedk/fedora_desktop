@@ -1,0 +1,54 @@
+-  name: Install Packages.
+   package:
+     name:
+       - htop
+       - vim
+       - git
+       - dconf-cli
+       - python3-psutil
+       - code
+       - slack
+
+-  name: Copy wallpaper file.
+   copy:
+     src: files/wallpaper.jpg
+     dest: /home/mikael/Pictures/ansible-wallpaper.jpg
+     owner: root
+     group: root
+
+-  name: Set Wallpaper.
+   become_user: mikael
+   dconf:
+     key: "/org/gnome/desktop/background/picture-uri"
+     value: "'file:////home/mikael/Pictures/ansible-wallpaper.jpg'"
+
+-  name: Set Wallpaper position.
+   become_user: mikael
+   dconf:
+     key: "/org/gnome/desktop/background/picture-options"
+     value: "'zoom'"
+
+-  name: Add Microsoft GPG Key.
+   apt_key:
+     url: https://packages.microsoft.com/keys/microsoft.asc
+     state: present
+
+-  name: Add microsoft VS Code repo. 
+   apt_repository:
+     repo: deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main
+     state: present
+
+-  name: Add Microsoft Teams repo.
+   apt_repository:
+     repo: deb [arch=amd64] https://packages.microsoft.com/repos/ms-teams stable main
+
+-  name: Add microsoft Edge repo. 
+   apt_repository:
+     repo: deb [arch=amd64] https://packages.microsoft.com/repos/edge stable main
+     state: present
+
+-  name: Install Microsoft Applications.
+   package:
+     name:
+       - teams
+       - microsoft-edge-stable
