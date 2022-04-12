@@ -28,6 +28,7 @@
 -  name: Add microsoft VS Code repo. 
    yum_repository:
      name: vscode 
+     description: VSCode YUM repo
      file: external_repos
      baseurl: https://packages.microsoft.com/yumrepos/vscode
      state: present
