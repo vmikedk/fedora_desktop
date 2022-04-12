@@ -4,10 +4,8 @@
        - htop
        - vim
        - git
-       - dconf-cli
        - python3-psutil
        - code
-       - slack
 
 -  name: Copy wallpaper file.
    copy:
