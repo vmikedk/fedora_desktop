@@ -34,17 +34,17 @@
      state: present
 
 -  name: Add microsoft VS Code repo. 
-   apt_repository:
-     repo: deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main
+   yum_repository:
+     repo: yum [arch=amd64] https://packages.microsoft.com/yumrepos/vscode stable main
      state: present
 
 -  name: Add Microsoft Teams repo.
-   apt_repository:
-     repo: deb [arch=amd64] https://packages.microsoft.com/repos/ms-teams stable main
+   yum_repository:
+     repo: yum [arch=amd64] https://packages.microsoft.com/yumrepos/ms-teams stable main
 
 -  name: Add microsoft Edge repo. 
-   apt_repository:
-     repo: deb [arch=amd64] https://packages.microsoft.com/repos/edge stable main
+   yum_repository:
+     repo: yum [arch=amd64] https://packages.microsoft.com/yumrepos/edge stable main
      state: present
 
 -  name: Install Microsoft Applications.
