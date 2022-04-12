@@ -68,9 +68,4 @@
     classic: yes
     state: present
 
--  name: Install Powershell with Snap.
-   community.general.slack:
-     name: powershell
-     classic: yes 
-     state: present
 
