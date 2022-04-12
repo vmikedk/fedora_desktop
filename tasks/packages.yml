@@ -63,6 +63,6 @@
        - code
 
 - name: Install Applications with Snap.
-  community.general.snap
+  community.general.snap:
     name: slack
     classic: yes 
