@@ -63,6 +63,9 @@
        - microsoft-edge-stable
        - code
 
+-  name: Add Flatpak Repo
+   ansible.builtin.command: flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+
 - name: Install Slack with Flatpack.
   community.general.flatpak:
     name: com.slack.Slack
