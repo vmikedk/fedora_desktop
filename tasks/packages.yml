@@ -5,6 +5,7 @@
        - vim
        - git
        - python3-psutil
+       - snapd
        
 -  name: Copy wallpaper file.
    copy:
@@ -60,3 +61,8 @@
        - teams
        - microsoft-edge-stable
        - code
+
+- name: Install Applications with Snap.
+  community.general.snap
+    name: slack
+    classic: yes 
