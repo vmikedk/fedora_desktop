@@ -6,8 +6,7 @@
        - git
        - python3-psutil
        - snapd
-       - compat-openssl10
-       
+              
 -  name: Copy wallpaper file.
    copy:
      src: files/wallpaper.jpg
