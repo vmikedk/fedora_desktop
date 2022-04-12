@@ -26,7 +26,7 @@
      value: "'zoom'"
 
 -  name: Add Microsoft GPG Key.
-   apt_key:
+   rpm_key:
      url: https://packages.microsoft.com/keys/microsoft.asc
      state: present
 
