@@ -65,6 +65,6 @@
 
 - name: Install Slack with Flatpack.
   community.general.flatpak:
-    name:
-      - com.slack.Slack
+    name: com.slack.Slack
+    state: present
 
