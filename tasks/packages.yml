@@ -55,6 +55,8 @@
      gpgkey: https://packages.microsoft.com/keys/microsoft.asc
      gpgcheck: yes
 
+
+
 -  name: Install Microsoft Applications.
    package:
      name:
@@ -70,6 +72,6 @@
 
 -  name: Install additional Applications with Snap.
    community.general.slack:
-     name:
-       - keepassxc
-       - bitwarden
+     name: bitwarden
+     classic: yes
+     state: present
