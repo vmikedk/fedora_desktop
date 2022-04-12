@@ -68,6 +68,9 @@
 
 - name: Install Slack with Flatpack.
   community.general.flatpak:
-    name: com.slack.Slack
+    name: 
+      - com.slack.Slack
+      - org.signal.Signal
+      - uk.co.ibboard.cawbird
     state: present
 
