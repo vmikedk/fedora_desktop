@@ -25,15 +25,12 @@
      key: "/org/gnome/desktop/background/picture-options"
      value: "'zoom'"
 
--  name: Add Microsoft GPG Key.
-   rpm_key:
-     url: https://packages.microsoft.com/keys/microsoft.asc
-     state: present
-
 -  name: Add microsoft VS Code repo. 
    yum_repository:
      repo: yum [arch=amd64] https://packages.microsoft.com/yumrepos/vscode stable main
      state: present
+     gpgkey: https://packages.microsoft.com/keys/microsoft.asc
+     gpgcheck: yes 
 
 -  name: Add Microsoft Teams repo.
    yum_repository:
