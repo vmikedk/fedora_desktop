@@ -62,8 +62,14 @@
        - microsoft-edge-stable
        - code
 
-- name: Install Applications with Snap.
+- name: Install Slack with Snap.
   community.general.snap:
     name: slack
     classic: yes
-    state: present  
+    state: present
+
+-  name: Install additional Applications with Snap.
+   community.general.slack:
+     name:
+       - keepassxc
+       - bitwarden
