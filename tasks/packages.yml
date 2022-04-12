@@ -66,11 +66,14 @@
 -  name: Add Flatpak Repo
    ansible.builtin.command: flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 
-- name: Install Slack with Flatpack.
+- name: Install Applications with Flatpack.
   community.general.flatpak:
     name: 
       - com.slack.Slack
       - org.signal.Signal
       - uk.co.ibboard.cawbird
+      - io.gitlab.librewolf-community
+      - us.zoom.Zoom
+      - com.bitwarden.desktop
     state: present
 
