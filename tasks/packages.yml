@@ -27,7 +27,9 @@
 
 -  name: Add microsoft VS Code repo. 
    yum_repository:
-     repo: yum [arch=amd64] https://packages.microsoft.com/yumrepos/vscode stable main
+     name: vscode 
+     file: external_repos
+     baseurl: https://packages.microsoft.com/yumrepos/vscode
      state: present
      gpgkey: https://packages.microsoft.com/keys/microsoft.asc
      gpgcheck: yes 
