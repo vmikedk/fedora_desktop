@@ -37,12 +37,22 @@
 
 -  name: Add Microsoft Teams repo.
    yum_repository:
-     repo: yum [arch=amd64] https://packages.microsoft.com/yumrepos/ms-teams stable main
+     name: ms-teams 
+     description: ms-teams YUM repo 
+     file: external_repos
+     baseurl: https://packages.microsoft.com/yumrepos/ms-teams
+     state: present
+     gpgkey: https://packages.microsoft.com/keys/microsoft.asc
+     gpgcheck: yes
 
 -  name: Add microsoft Edge repo. 
    yum_repository:
-     repo: yum [arch=amd64] https://packages.microsoft.com/yumrepos/edge stable main
+     name: Edge
+     description: edge YUM repo 
+     baseurl: https://packages.microsoft.com/yumrepos/edge
      state: present
+     gpgkey: https://packages.microsoft.com/keys/microsoft.asc
+     gpgcheck: yes
 
 -  name: Install Microsoft Applications.
    package:
