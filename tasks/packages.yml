@@ -6,7 +6,6 @@
        - git
        - python3-psutil
        - fedmod
-       - flatpak
        - flatpak-module-tools
               
 -  name: Copy wallpaper file.
