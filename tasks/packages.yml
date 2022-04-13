@@ -75,6 +75,6 @@
       - io.gitlab.librewolf-community
       - us.zoom.Zoom
       - com.bitwarden.desktop
-      - com.onepassword.OnePassword
+      - https://downloads.1password.com/linux/flatpak/1Password.flatpakref
     state: present
 
