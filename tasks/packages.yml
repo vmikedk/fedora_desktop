@@ -75,18 +75,6 @@
       - io.gitlab.librewolf-community
       - us.zoom.Zoom
       - com.bitwarden.desktop
+      - com.onepassword.OnePassword
     state: present
 
--  name: Add 1Password repo 
-   yum_repository:
-     name: 1Password Stable Channel
-     description: 1Password YUM repo 
-     baseurl: https://downloads.1password.com/linux/rpm/stable/\$basearch
-     state: present
-     gpgkey: https://downloads.1password.com/linux/keys/1password.asc
-     gpgcheck: yes
-
-- name: Install 1Password
-  package:
-    name: 1Password 
-    state: present  
