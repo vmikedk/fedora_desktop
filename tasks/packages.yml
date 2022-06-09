@@ -5,7 +5,6 @@
        - vim
        - git
        - python3-psutil
-       - fedmod
        - flatpak-module-tools
               
 -  name: Copy wallpaper file.
