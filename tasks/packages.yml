@@ -29,7 +29,7 @@
 - name: Copy VIM Configuration file to Home folder
   copy: 
     src: files/.vimrc
-    dest: ~/.vimrc
+    dest: /home/mikael.vimrc
 
 -  name: Add microsoft VS Code repo. 
    yum_repository:
