@@ -66,6 +66,9 @@
 -  name: Add Flatpak Repo
    ansible.builtin.command: flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 
+-  name: Enable flathub. 
+   ansible.builtin.shell: flatpak remote-modify --enable flathub
+
 - name: Install Applications with Flatpack.
   community.general.flatpak:
     name: 
