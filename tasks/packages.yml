@@ -5,7 +5,6 @@
        - vim
        - git
        - python3-psutil
-       - fedmod
        - flatpak-module-tools
               
 -  name: Copy wallpaper file.
@@ -26,6 +25,11 @@
    dconf:
      key: "/org/gnome/desktop/background/picture-options"
      value: "'zoom'"
+
+- name: Copy VIM Configuration file to Home folder
+  copy: 
+    src: files/.vimrc
+    dest: /home/mikael/.vimrc
 
 -  name: Add microsoft VS Code repo. 
    yum_repository:
